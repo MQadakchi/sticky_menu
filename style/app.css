@@ -1,0 +1,102 @@
+:root {
+  --primaryColor: #dabfff;
+  --secondaryColor: #4f518c;
+  --textColor: #907ad6;
+  --lightColor: #7fdeff;
+  --darkColor: #2c2a4a;
+}
+
+@font-face {
+  font-family: "vazir";
+  src: url("/fonts/vazir.ttf") format("truetype");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: vazir;
+  font-weight: normal;
+  direction: rtl;
+  text-align: right;
+}
+
+body {
+  margin: 0;
+  font-family: inherit;
+}
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--darkColor);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--lightColor);
+  border-radius: 25px;
+  box-shadow: 0 0 5px var(--lightColor);
+}
+header {
+  width: 100%;
+  height: 125px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  inset: 0;
+  transition: all 0.3s linear;
+}
+nav {
+  width: 75%;
+  height: 80%;
+  display: flex;
+  transition: all 0.3s linear;
+}
+nav .menu {
+  width: 80%;
+}
+nav .logo {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--lightColor);
+}
+nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+nav .menu a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: var(--lightColor);
+}
+.container {
+  width: 100%;
+  height: 200vh;
+  background-color: var(--darkColor);
+}
+.container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+header.active {
+  height: 75px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+header.active nav {
+  width: 90%;
+  height: 100%;
+}
+header.active nav .menu a,
+header.active nav .logo {
+  color: var(--darkColor);
+}
